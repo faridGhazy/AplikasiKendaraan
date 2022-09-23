@@ -1,6 +1,6 @@
 Cara menjalankan Aplikasi Kendaraan
 
-1. Cari Folder aplikasi, kemudian cari file "AplikasiKendaraan.sln"
+1. Cari Folder aplikasi, kemudian cari file "AplikasiKendaraan.sln" atau juga bisa melalui "clone repository" dari github
 
 ![image](https://user-images.githubusercontent.com/63331958/192067998-3d32062b-69a1-41b1-b8e9-fac820db8034.png)
 
