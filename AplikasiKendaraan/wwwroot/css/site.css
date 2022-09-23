@@ -1,0 +1,129 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/*_Layout*/
+.fluid {
+    padding : 0% 10%;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+/*Kendaraan Page Style*/
+
+/*Index*/
+table {
+    text-align: center;
+}
+
+.table-head {
+    background-color: #3381FF;
+
+}
+
+.action {
+    padding: 0px 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.detail {
+    color: orange;
+}
+
+.edit {
+    color: blue;
+}
+
+.delete {
+    color: red;
+}
+.pencarian-form {
+    padding: 3%;
+}
+
+.pencarian {
+    background-color: #eab676;
+}
+
+.tombol-cari {
+    font-size: 1rem;
+    width: 120px;
+    height: 40px;
+    float: right;
+    margin: 3% -3% 3% 5%;
+}
+
+
+/*Create*/
+.tombol {
+    margin-right: 10px;
+    width: 120px;
+    height: 40px;
+}

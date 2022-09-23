@@ -1,0 +1,93 @@
+﻿@page
+@model AplikasiKendaraan.Pages.KendaraanPage.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Aplikasi Kendaraan</h1>
+
+@*Fitur Pencarian*@
+<div class="pencarian">
+    <form class="pencarian-form">
+        <div class="mb-3">
+            <label for="no_register" class="form-label">No Registrasi</label>
+            <input type="text" class="form-control w-25" id="no_register" name="SearchNoReg"
+                   placeholder="No Register" autocomplete="off">
+        </div>
+        <div class="">
+            <label for="nama" class="form-label">Nama Pemilik</label>
+            <input type="text" class="form-control w-25" id="nama" placeholder="Nama Pemilik" name="namaPemilik" autocomplete="off">
+        </div>
+        <a asp-page="Create" class="btn btn-primary tombol-cari">Add</a>
+        <input type="submit" value="Filter" class="btn btn-primary tombol-cari" />
+    </form>
+</div>
+
+<table class="table">
+    <thead class="thead table-head">
+        <tr>
+            <th>No.</th>
+            <th>
+                No Registrasi
+            </th>
+            <th>
+                Nama Pemilik
+                @*@Html.DisplayNameFor(model => model.KendaraanModel[0].nama)*@
+            </th>
+            <th>
+                Merk Kendaraan
+            </th>
+            <th>
+                Tahun Pembuatan
+            </th>
+            <th>
+                Kapasitas
+            </th>
+            <th>
+                Warna
+            </th>
+            <th>
+                Bahan Bakar
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ var i = 1; }
+        @foreach (var item in Model.KendaraanModel)
+        {
+            <tr>
+                <td>
+                    <p>@i @{i++;}</p>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.no_register)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nama)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.merk)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tahun)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.silinder) cc
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.warna)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.bahanBakar)
+                </td>
+                <td>
+                    <a class="action detail" asp-page="./Details" asp-route-id="@item.no_register">Details</a>
+                    <a class="action edit" asp-page="./Edit" asp-route-id="@item.no_register">Edit</a>
+                    <a class="action delete" asp-page="./Delete" asp-route-id="@item.no_register">Delete</a>
+                </td>
+            </tr> 
+        }
+    </tbody>
+</table>

@@ -1,0 +1,85 @@
+﻿@page
+@model AplikasiKendaraan.Pages.KendaraanPage.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Data Kendaraan</h1>
+
+<hr />
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="row">
+        <input type="hidden" asp-for="KendaraanModel.no_register" />
+        <div class="form-group col">
+            <label asp-for="KendaraanModel.no_register" class="control-label">No Registrasi Kendaraan</label>
+            <input asp-for="KendaraanModel.no_register" class="form-control w-75" readonly />
+            <span asp-validation-for="KendaraanModel.no_register" class="text-danger"></span>
+        </div>
+        <div class="form-group col">
+            <label asp-for="KendaraanModel.tahun" class="control-label">Tahun Pembuatan</label>
+            <input asp-for="KendaraanModel.tahun" class="form-control w-75" />
+            <span asp-validation-for="KendaraanModel.tahun" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="KendaraanModel.nama" class="control-label">Nama Pemilik</label>
+            <input asp-for="KendaraanModel.nama" class="form-control w-75" />
+            <span asp-validation-for="KendaraanModel.nama" class="text-danger"></span>
+        </div>
+        <div class="form-group col">
+            <label asp-for="KendaraanModel.silinder" class="control-label">Kapasitas Silinder</label>
+            <input asp-for="KendaraanModel.silinder" class="form-control w-75" />
+            <span asp-validation-for="KendaraanModel.silinder" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="KendaraanModel.merk" class="control-label">Merk Kendaraan</label>
+            <input asp-for="KendaraanModel.merk" class="form-control w-75" />
+            <span asp-validation-for="KendaraanModel.merk" class="text-danger"></span>
+        </div>
+        <div class="form-group col">
+            <label asp-for="KendaraanModel.warna" class="control-label">Warna Kendaraan</label>
+            <select asp-for="KendaraanModel.warna" class="form-select form-control w-75">
+                <option aria-readonly="true">Pilih Warna</option>
+                <option value="Merah">Merah</option>
+                <option value="Hitam">Hitam</option>
+                <option value="Biru">Biru</option>
+                <option value="Abu-Abu">Abu-Abu</option>
+            </select>
+            <span asp-validation-for="KendaraanModel.warna" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+            <label asp-for="KendaraanModel.alamat" class="control-label">Alamat Pemilik Kendaraan</label>
+            <textarea asp-for="KendaraanModel.alamat" rows="5" class="form-control w-75"></textarea>
+            <span asp-validation-for="KendaraanModel.alamat" class="text-danger"></span>
+        </div>
+        <div class="form-group col">
+            <label asp-for="KendaraanModel.bahanBakar" class="control-label">Bahan Bakar Kendaraan</label>
+            <input asp-for="KendaraanModel.bahanBakar" class="form-control w-75" />
+            <span asp-validation-for="KendaraanModel.bahanBakar" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Ubah" class="btn btn-primary tombol" />
+        <a asp-page="./Index" class="btn btn-dark tombol">Kembali</a>
+    </div>
+</form>
+
+@*<div>
+    <a asp-page="./Index">Back to List</a>
+</div>*@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
