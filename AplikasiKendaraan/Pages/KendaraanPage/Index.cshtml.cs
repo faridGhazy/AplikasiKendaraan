@@ -24,7 +24,7 @@ namespace AplikasiKendaraan.Pages.KendaraanPage
         public async Task OnGetAsync(string SearchNoReg, string namaPemilik)
         {
             var noReg = from b in _context.KendaraanModel
-                        orderby b descending
+                        orderby b ascending
                         select b;
 
             if (!String.IsNullOrEmpty(SearchNoReg))
@@ -39,12 +39,8 @@ namespace AplikasiKendaraan.Pages.KendaraanPage
             {
                 noReg = (IOrderedQueryable<KendaraanModel>)_context.KendaraanModel.Where(s => s.nama!.Contains(namaPemilik));
             }
-
-            
-
+                      
             KendaraanModel = await noReg.ToListAsync();
-           /* await nmPemilik.ToListAsync();*/
-
 
             /*_context.KendaraanModel*/
         }

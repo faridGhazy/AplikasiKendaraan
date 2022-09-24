@@ -31,14 +31,26 @@ namespace AplikasiKendaraan.Pages.KendaraanPage
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
-            {
+            {                
                 return Page();
+            }
+
+            //cek data
+            if (KendaraanModelExists(KendaraanModel.no_register))
+            {           
+                return RedirectToPage("./DataSudahAda");
             }
 
             _context.KendaraanModel.Add(KendaraanModel);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
+        }
+
+        //Untuk Cek Apakah data sudah ada di database
+        private bool KendaraanModelExists(string id)
+        {
+            return _context.KendaraanModel.Any(e => e.no_register == id);
         }
     }
 }
