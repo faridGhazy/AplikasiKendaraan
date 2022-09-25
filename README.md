@@ -1,3 +1,5 @@
+Link Video Demo : https://youtu.be/G7LXrzciV7o
+
 Cara menjalankan Aplikasi Kendaraan
 
 1. Cari Folder aplikasi, kemudian cari file "AplikasiKendaraan.sln" atau juga bisa melalui "clone repository" dari github
