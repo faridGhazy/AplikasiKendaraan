@@ -108,9 +108,10 @@ table {
 
 .delete {
     color: red;
-    border:none;
-    margin:0;
-    padding:0;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
 }
 
     .delete:hover {
@@ -170,9 +171,54 @@ table {
     margin-bottom: 2rem;
 }
 
+@media only screen and (min-width: 1045px) {
+    .text-cari {
+        width: 25%;
+    }
+}
 
-@media only screen and (max-width: 830px) {
+@media screen and (max-width: 1045px) and (min-width: 835px) {
+    .priority-3 {
+        display: none;
+    }
+    .text-cari {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 835px) {
     .details {
-        margin: 0%;
+        margin: 0%;        
+    }
+}
+
+@media screen and (max-width: 835px) and (min-width: 300px) {
+    body {
+        /* Margin bottom by footer height */
+        margin-bottom: 60px;
+        background-color: #EEF1FF;
+        font-size: 15px;
+    }
+
+    /*Tombol Cari*/
+    .tombol-cari {
+        font-size: 1rem;
+        width: 120px;
+        height: 40px;
+        float: right;
+        margin: 3.2% -3.2% 6% 5%;
+    }
+
+
+    .text-cari {
+        width: 50%;
+    }
+
+    .priority-2 {
+        display: none;
+    }
+
+    .priority-3 {
+        display: none;
     }
 }
