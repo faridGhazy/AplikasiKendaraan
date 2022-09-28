@@ -5,66 +5,61 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details Kendaraan</h1>
+<div class="details">
+    <h1 class="detail-header">Details Kendaraan</h1>
+    <table class="table table-striped tabel-detail" style="text-align:left;">
+        <tr>
+            <th class="col-lg-5 col-md-7 col-6">No Register</th>
+            <td class="col-lg-7 col-md-5 col-6">
+                @Html.DisplayFor(model => model.KendaraanModel.no_register)
+            </td>
+        </tr>
+        <tr>
+            <th>Nama Pemilik</th>
+            <td>
+                @Html.DisplayFor(model => model.KendaraanModel.nama)
+            </td>
+        </tr>
+        <tr>
+            <th>Alamat Pemilik Kendaraan</th>
+            <td>
+                @Html.DisplayFor(model => model.KendaraanModel.alamat)
+            </td>
+        </tr>
+        <tr>
+            <th>Merk Kendaraan</th>
+            <td>
+                @Html.DisplayFor(model => model.KendaraanModel.merk)
+            </td>
+        </tr>
+        <tr>
+            <th>Tahun Pembuatan</th>
+            <td>
+                @Html.DisplayFor(model => model.KendaraanModel.tahun)
+            </td>
+        </tr>
+        <tr>
+            <th>Kapasitas Silinder</th>
+            <td>
+                @Html.DisplayFor(model => model.KendaraanModel.silinder)
+            </td>
+        </tr>
+        <tr>
+            <th>Warna Kendaraan</th>
+            <td>
+                @Html.DisplayFor(model => model.KendaraanModel.warna)
+            </td>
+        </tr>
+        <tr>
+            <th>Bahan Bakar Kendaraan</th>
+            <td>
+                @Html.DisplayFor(model => model.KendaraanModel.bahanBakar)
+            </td>
+        </tr>
+    </table>
 
-<div>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-4">
-            No Register
-        </dt>
-        <dd class="col-sm-6">
-            @Html.DisplayFor(model => model.KendaraanModel.no_register)
-        </dd>
-        <dt class="col-sm-4">
-            Nama Pemilik
-        </dt>
-        <dd class="col-sm-6">
-            @Html.DisplayFor(model => model.KendaraanModel.nama)
-        </dd>
-        <dt class="col-sm-4">
-            Alamat Pemilik Kendaraan
-        </dt>
-        <dd class="col-sm-6">
-            @Html.DisplayFor(model => model.KendaraanModel.alamat)
-        </dd>
-        <dt class="col-sm-4">
-            Merk Kendaraan
-        </dt>
-        <dd class="col-sm-6">
-            @Html.DisplayFor(model => model.KendaraanModel.merk)
-        </dd>
-        <dt class="col-sm-4">
-            Tahun Pembuatan
-        </dt>
-        <dd class="col-sm-6">
-            @Html.DisplayFor(model => model.KendaraanModel.tahun)
-        </dd>
-        <dt class="col-sm-4">
-            Kapasitas Silinder
-        </dt>
-        <dd class="col-sm-6">
-            @Html.DisplayFor(model => model.KendaraanModel.silinder)
-        </dd>
-        <dt class="col-sm-4">
-            Warna Kendaraan
-        </dt>
-        <dd class="col-sm-6">
-            @Html.DisplayFor(model => model.KendaraanModel.warna)
-        </dd>
-        <dt class="col-sm-4">
-            Bahan Bakar Kendaraan
-        </dt>
-        <dd class="col-sm-6">
-            @Html.DisplayFor(model => model.KendaraanModel.bahanBakar)
-        </dd>
-    </dl>
-</div>
-@*<div>
-    <a asp-page="./Edit" asp-route-id="@Model.KendaraanModel.no_register">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
-</div>*@
-<div class="form-group">
-    <a asp-page="./Edit" asp-route-id="@Model.KendaraanModel.no_register" class="btn btn-primary tombol">Edit</a>
-    <a asp-page="./Index" class="btn btn-primary tombol">Kembali</a>
+    <div class="form-group">
+        <a asp-page="./Edit" asp-route-id="@Model.KendaraanModel.no_register" class="btn btn-primary tombol">Edit</a>
+        <a asp-page="./Index" class="btn btn-primary tombol">Kembali</a>
+    </div>
 </div>

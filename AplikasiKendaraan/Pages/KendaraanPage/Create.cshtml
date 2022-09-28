@@ -18,7 +18,7 @@
             </div>
             <div class="form-group col">
                 <label asp-for="KendaraanModel.tahun" class="control-label">Tahun Pembuatan</label>
-                <input asp-for="KendaraanModel.tahun" class="form-control w-75" maxlength="4" />
+                <input asp-for="KendaraanModel.tahun" class="form-control w-25" maxlength="4" />
                 <span asp-validation-for="KendaraanModel.tahun" class="text-danger"></span>
             </div>
         </div>
@@ -50,6 +50,7 @@
                     <option value="Hitam">Hitam</option>
                     <option value="Biru">Biru</option>
                     <option value="Abu-Abu">Abu-Abu</option>
+                    <option value="Putih">Putih</option>
                 </select>
                 <span asp-validation-for="KendaraanModel.warna" class="text-danger"></span>
             </div>

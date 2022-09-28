@@ -64,8 +64,10 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: #EEF1FF;
+    font-size: 20px;
 }
 .footer {
   position: absolute;
@@ -78,13 +80,16 @@ body {
 /*Kendaraan Page Style*/
 
 /*Index*/
+.big-heading {
+    margin: 2rem 0;
+}
+
 table {
     text-align: center;
 }
 
 .table-head {
     background-color: #3381FF;
-
 }
 
 .action {
@@ -103,7 +108,31 @@ table {
 
 .delete {
     color: red;
+    border:none;
+    margin:0;
+    padding:0;
 }
+
+    .delete:hover {
+        color: #EE6983;
+        border: none;
+        text-decoration:underline;
+    }
+
+#form-delete {
+    display: inline;
+}
+
+/*Modal*/
+.modal {
+    margin: 10% 0;
+}
+
+.btn-modal {
+    width: 6rem;
+}
+
+/*form Search*/
 .pencarian-form {
     padding: 3%;
 }
@@ -117,13 +146,32 @@ table {
     width: 120px;
     height: 40px;
     float: right;
-    margin: 3% -3% 3% 5%;
+    margin: 3.2% -3.2% 3% 5%;
 }
-
 
 /*Create*/
 .tombol {
     margin-right: 10px;
     width: 120px;
     height: 40px;
+}
+
+/*Details*/
+.details {
+    margin: 3% 15%;   
+}
+
+.detail-header {
+    padding-left: 10px;
+    margin-bottom: 2rem;
+}
+
+.tabel-detail {
+    margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 1200px) {
+    .tabel-detail {
+        width: 70%;
+    }
 }

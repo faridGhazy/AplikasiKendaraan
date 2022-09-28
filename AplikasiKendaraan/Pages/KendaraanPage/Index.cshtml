@@ -5,7 +5,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Aplikasi Kendaraan</h1>
+<h1 class="big-heading">Aplikasi Kendaraan</h1>
 
 @*Fitur Pencarian*@
 <div class="pencarian">
@@ -85,9 +85,41 @@
                 <td>
                     <a class="action detail" asp-page="./Details" asp-route-id="@item.no_register">Details</a>
                     <a class="action edit" asp-page="./Edit" asp-route-id="@item.no_register">Edit</a>
-                    <a class="action delete" asp-page="./Delete" asp-route-id="@item.no_register">Delete</a>
+
+                    @*Form Delete Modal*@
+                    <form id="form-delete" asp-page="./Delete" asp-route-id="@item.no_register">
+                        <button type="button" class="action delete" data-toggle="modal" data-target="#ModalDelete">
+                            Delete
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="ModalDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <h4>Anda yakin menghapus data @Html.DisplayFor(modelItem => item.no_register) ?</h4>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-danger btn-lg btn-modal">Ok</button>
+                                        <button type="button" class="btn btn-secondary btn-lg btn-modal" data-dismiss="modal">Batal</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
                 </td>
-            </tr> 
+            </tr>
+
         }
     </tbody>
 </table>
+
+@*Percobaan Delete*@
+@*<a class="action delete" asp-page="./Delete" asp-route-id="@item.no_register">Delete</a>
+<form id="form-delete" asp-page="./Delete" asp-route-id="@item.no_register"
+      onclick="return confirm('Anda Yakin menghapus data ' + '@item.no_register' + ' ?')">
+    <input type="submit" value="Delete" class="action delete" />
+</form>*@
+
