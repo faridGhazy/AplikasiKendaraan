@@ -170,8 +170,9 @@ table {
     margin-bottom: 2rem;
 }
 
-@media only screen and (min-width: 1200px) {
-    .tabel-detail {
-        width: 70%;
+
+@media only screen and (max-width: 830px) {
+    .details {
+        margin: 0%;
     }
 }
